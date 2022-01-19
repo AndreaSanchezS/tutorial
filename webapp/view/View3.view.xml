@@ -1,0 +1,33 @@
+<mvc:View
+    controllerName="accenture.tutorial1.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+>
+
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table id="idTable" inset="false" items="{CitiesModel>/}">
+            <columns>
+                <Column width="12em">
+                <Text text="Cities" />
+                </Column>
+                <Column width="12em">
+                <Text text="Population" />
+                </Column>
+            </columns>
+            <items>
+            <ColumnListItem vAlign="Middle" press="onPress" type="Active" >
+                <cells>
+                    <Text text="{CitiesModel>name}" />
+                    <Text text="{path:'CitiesModel>population', formatter:'.Formatter.formatPopulation'}"/>
+                </cells>
+            </ColumnListItem>
+            </items>
+            </Table>
+        </content>
+    </Page>
+
+</mvc:View>

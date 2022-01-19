@@ -88,9 +88,23 @@
       "routes": [
         {
           "name": "RouteView1",
-          "pattern": "RouteView1",
+          "pattern": "",
           "target": [
             "TargetView1"
+          ]
+        },
+        {
+          "name": "RouteView2",
+          "pattern": "View2",
+          "target": [
+            "TargetView2"
+          ]
+        },
+        {
+          "name": "RouteView3",
+          "pattern": "View3",
+          "target": [
+            "TargetView3"
           ]
         }
       ],
@@ -101,14 +115,28 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+        "TargetView2": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View2",
+          "viewName": "View2"
+        },
+        "TargetView3": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View3",
+          "viewName": "View3"
         }
       }
     },
     "rootView": {
-      "viewName": "accenture.tutorial1.view.View1",
+      "viewName": "accenture.tutorial1.view.App",
       "type": "XML",
       "async": true,
-      "id": "View1"
+      "id": "App"
     }
   }
 }
