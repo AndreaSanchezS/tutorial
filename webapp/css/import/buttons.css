@@ -6,6 +6,6 @@
 
 .myPrimaryBtn:hover > span{
     background-color: #b269d6 !important;
-    border: none !important;
+    border: none;
     color: white !important;
 }
