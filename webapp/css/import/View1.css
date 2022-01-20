@@ -1,0 +1,16 @@
+.myHeaderBarGeneric{
+    display:flex;
+    justify-content: space-around;
+}
+
+.myComboBoxStyle{
+    width: 100%;
+}
+
+.myHeaderBarGeneric >div:nth-child(2) {
+    width: 100%;
+}
+
+.myHeaderBarGeneric >div {
+    margin: 0 1rem;
+}

@@ -10,13 +10,13 @@
     <table:Table rows="{CitiesModel>/}">
         <table:columns>
             <table:Column id="name" filterProperty="">
-                <Label text="City Name"></Label>
+                <Label text="{i18n>cityName}"></Label>
                     <table:template>
                         <Text text="{CitiesModel>name}" wrapping="false"></Text>
                         </table:template>
                     </table:Column>
                     <table:Column id="population" filterProperty="">
-                        <Label text="Population"></Label>
+                        <Label text="{i18n>population}"></Label>
                         <table:template>
                             <Text text="{path: 'CitiesModel>population', formatter: '.Formatter.formatPopulation'}" wrapping="false"></Text>
                         </table:template>

@@ -22,7 +22,7 @@ sap.ui.define([
             },
 
             onPress: function(oEvent){
-                //console.log(oEvent.getSource().getCells());
+                console.log(oEvent.getSource().getCells());
                 Common.openDialogFromFragment(this, "idSayHelloDialog", "accenture.tutorial1.fragment.sayHelloDialog", this.onClose());
             },
             onClose: function () {

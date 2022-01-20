@@ -12,16 +12,16 @@
             <Table id="idTable" inset="false" items="{CitiesModel>/}">
             <columns>
                 <Column width="12em">
-                <Text text="Cities" />
+                <Text text="{i18n>cityName}" />
                 </Column>
                 <Column width="12em">
-                <Text text="Population" />
+                <Text text="{i18n>population}" />
                 </Column>
             </columns>
             <items>
             <ColumnListItem vAlign="Middle" press="onPress" type="Active" >
                 <cells>
-                    <Text text="{CitiesModel>name}" />
+                    <Text id="CitiesModel-name" text="{CitiesModel>name}" />
                     <Text text="{path:'CitiesModel>population', formatter:'.Formatter.formatPopulation'}"/>
                 </cells>
             </ColumnListItem>

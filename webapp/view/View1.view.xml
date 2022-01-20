@@ -8,12 +8,14 @@
 
     <Page id="page" title="{i18n>title}">
         <content>
-            <Button text="Hello World!" press="onSayHello"></Button>
-             <ComboBox id="city-combobox" items="{CitiesModel>/}" selectedKey="{ToolModel>/selectedCity}">
-                    <core:Item text="{CitiesModel>name}" key="{CitiesModel>name}" />
-             </ComboBox>
-             <Button text="Navigate to View 2" press="onNavigateToView2"></Button>
-             <Button text="Navigate to View 3" press="onNavigateToView3"></Button>
+            <HBox class="myHeaderBarGeneric">
+                <Button class="myPrimaryBtn" text="{i18n>helloWorld}" press="onSayHello"></Button>
+                    <ComboBox class="myComboBoxStyle" id="city-combobox" items="{CitiesModel>/}" selectedKey="{ToolModel>/selectedCity}">
+                        <core:Item text="{CitiesModel>name}" key="{CitiesModel>name}" />
+                    </ComboBox>
+                <Button text="{i18n>navigateView2}" press="onNavigateToView2"></Button>
+                <Button text="{i18n>navigateView3}" press="onNavigateToView3"></Button>
+            </HBox>
         </content>
     </Page>
 
