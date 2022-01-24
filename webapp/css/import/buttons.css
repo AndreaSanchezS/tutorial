@@ -1,7 +1,7 @@
 .myPrimaryBtn > span{
-    background-color: #610091;
+    background-color: #610091 !important;
     border: none;
-    color: white;
+    color: white !important;
 }
 
 .myPrimaryBtn:hover > span{

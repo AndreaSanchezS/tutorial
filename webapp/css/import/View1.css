@@ -14,3 +14,16 @@
 .myHeaderBarGeneric >div {
     margin: 0 1rem;
 }
+
+.myCustomView section{
+    position: unset !important;
+}
+
+.myCustomIconTab .sapMITBSelected .sapMITBContentArrow::after {
+    background: #610091;
+}
+
+.myCustomIconTab .sapMITBFilter .sapMITBText > span {
+    color: black;
+    font-weight: bold;
+}

@@ -1,0 +1,93 @@
+<mvc:View
+    controllerName="accenture.tutorial1.controller.Autorization"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+	xmlns:f="sap.f"
+	xmlns:layout="sap.ui.layout"
+	height="100%"
+>
+<App>
+        <f:DynamicPage id="dynamicPageId" headerExpanded="true" showFooter="true">
+            <!-- DynamicPage Title -->
+            <f:title>
+                <f:DynamicPageTitle>
+                    <f:heading>
+                        <Title text="Header Title"/>
+                    </f:heading>
+                </f:DynamicPageTitle>
+            </f:title>
+            <!-- DynamicPage Header -->
+            <f:header>
+                <f:DynamicPageHeader pinnable="true">
+                    <layout:HorizontalLayout allowWrapping="true">
+                        <layout:VerticalLayout class="sapUiMediumMarginEnd">
+                            <ObjectAttribute title="Location" text="Warehouse A"/>
+                            <ObjectAttribute title="Halway" text="23L"/>
+                            <ObjectAttribute title="Rack" text="34"/>
+                        </layout:VerticalLayout>
+                        <layout:VerticalLayout>
+                            <ObjectAttribute title="Availability"/>
+                            <ObjectStatus text="In Stock" state="Success" />
+                        </layout:VerticalLayout>
+                    </layout:HorizontalLayout>
+                </f:DynamicPageHeader>
+            </f:header>
+            <f:content>
+                <Table id="idProductsTable"
+                        sticky="HeaderToolbar,ColumnHeaders"
+                        inset="false"
+                        items="Proof"
+                        class="sapFDynamicPageAlignContent"
+                        width="auto">
+                    <headerToolbar>
+                        <Toolbar>
+                            <Title text="Products" level="H2"/>
+                            <ToolbarSpacer />
+                            <Button class="myPrimaryBtn" text="{i18n>helloWorld}" press="onSayHello" />
+                            
+                        </Toolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column width="auto">
+                            <Text text="Autorizaciones de Tiempos" />
+                        </Column>
+                        <Column minScreenWidth="768px" demandPopin="true" popinDisplay="Inline">
+                            <Text text="Tipo" />
+                        </Column>
+                        <Column minScreenWidth="768px" demandPopin="true" popinDisplay="Inline">
+                            <Text text="Fecha / Hora" />
+                        </Column>
+                        <Column width="auto" hAlign="End">
+                            <Text text="Estado" />
+                        </Column>
+                        <Column minScreenWidth="768px" demandPopin="true" popinDisplay="Inline">
+                            <Text text="Aprobado por" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <ObjectIdentifier title="Andrea Sánchez"/>
+                                <Text text="Vacaciones" />
+                                <Text text="2/02/2022 14:00pm" />
+                                <ObjectStatus text="Aprobado" state="Success" />
+                                <Text text="Jose Rubí" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </f:content>
+            <!-- DynamicPage Footer -->
+            <f:footer>
+                <Toolbar>
+                    <Button text="{/messagesLength}" />
+                    <ToolbarSpacer/>
+                    <Button type="Accept" text="Accept"/>
+                    <Button type="Reject" text="Reject"/>
+                </Toolbar>
+            </f:footer>
+        </f:DynamicPage>
+    </App>
+</mvc:View>
