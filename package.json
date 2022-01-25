@@ -12,6 +12,7 @@
   "dependencies": {},
   "devDependencies": {
     "@ui5/cli": "^2.14.1",
+    "@sap/ux-ui5-fe-mockserver-middleware": "1",
     "@sap/ux-ui5-tooling": "1"
   },
   "scripts": {
@@ -27,7 +28,8 @@
   },
   "ui5": {
     "dependencies": [
-      "@sap/ux-ui5-tooling"
+      "@sap/ux-ui5-tooling",
+      "@sap/ux-ui5-fe-mockserver-middleware"
     ]
   },
   "sapuxLayer": "CUSTOMER_BASE"

@@ -4,7 +4,7 @@
     xmlns:html="http://www.w3.org/1999/xhtml">
 
     <Dialog title="{i18n>helloDialog}">
-        <Text text=" {i18n>helloDialogText1} {ToolModel>/name} {i18n>helloDialogText2} {ToolModel>/selectedCity}"></Text>
+        <Text text=" {i18n>helloDialogText1} {ProductName} {i18n>helloDialogText2} {ToolModel>/selectedCity}"></Text>
         <endButton>
             <Button text="Cerrar" press="onClose"></Button>
         </endButton>

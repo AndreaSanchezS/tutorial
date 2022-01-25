@@ -29,8 +29,8 @@
 
             <HBox class="myHeaderBarGeneric">
                 <Button class="myPrimaryBtn" text="{i18n>helloWorld}" press="onSayHello"></Button>
-                    <ComboBox class="myComboBoxStyle" id="city-combobox" items="{CitiesModel>/}" selectedKey="{ToolModel>/selectedCity}">
-                        <core:Item text="{CitiesModel>name}" key="{CitiesModel>name}" />
+                    <ComboBox class="myComboBoxStyle" id="city-combobox" items="{/Products}" selectedKey="{ToolModel>/selectedCity}">
+                        <core:Item text="{ProductName}" key="{ProductName}" />
                     </ComboBox>
                 <Button text="{i18n>navigateView2}" press="onNavigateToView2"></Button>
                 <Button text="{i18n>navigateView3}" press="onNavigateToView3"></Button>
@@ -38,4 +38,8 @@
         </content>
     </Page>
 
+    <!--                    
+        <ComboBox class="myComboBoxStyle" id="city-combobox" items="{CitiesModel>/}" selectedKey="{ToolModel>/selectedCity}">
+            <core:Item text="{CitiesModel>name}" key="{CitiesModel>name}" />
+        </ComboBox>-->
 </mvc:View>

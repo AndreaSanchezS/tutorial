@@ -22,13 +22,24 @@ sap.ui.define([
             },
 
             onPress: function(oEvent){
-                console.log(oEvent.getSource().getCells());
-                Common.openDialogFromFragment(this, "idSayHelloDialog", "accenture.tutorial1.fragment.sayHelloDialog", this.onClose());
-            },
-            onClose: function () {
-                if ( this._dialogSayHello ) {
-                    this._dialogSayHello.close()
-                }
+                //var oToolsModel = this.getOwnerComponent().getModel("ToolModel");
+                //console.log(oEvent.getSource().getBindingContext().sPath);
+
+                var oModelNorthWind = this.getOwnerComponent().getModel();
+                console.log(oEvent.getSource().getBindingContext().sPath)
+
+                oModelNorthWind.read(oEvent.getSource().getBindingContext().sPath, {
+                    success: function (oData){
+                        console.log(oData);
+                        sap.ui.getCore().setModel(new JSONModel(oData), "DetailModel");
+                        Common.navigateTo(this, "RouteView4");
+                    }.bind(this)
+                });
+
+                //var row= oEvent.getSource().getCells();
+                //oToolsModel.setProperty("/selectedCity", row[0].getText());
+                
+                //Common.openDialogFromFragment(this, "idSayHelloDialog", "accenture.tutorial1.fragment.sayHelloDialog");
             }
 
         });

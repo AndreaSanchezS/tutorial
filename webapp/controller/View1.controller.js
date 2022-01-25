@@ -27,7 +27,7 @@ sap.ui.define([
                  */
                 
                 if (!Validator.isNotEmpty(this.getView().byId("city-combobox").getSelectedKey())){
-                    sap.m.MessageToast.show("{i18n>selectCity}", {
+                    sap.m.MessageToast.show("Select a City", {
                         duration: 3000,
                     });
                     return;

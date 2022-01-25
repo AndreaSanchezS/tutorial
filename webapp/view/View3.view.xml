@@ -9,20 +9,32 @@
 
     <Page id="page" title="{i18n>title}">
         <content>
-            <Table id="idTable" inset="false" items="{CitiesModel>/}">
+            <Table id="idTable" inset="false" items="{/Products}">
             <columns>
                 <Column width="12em">
-                <Text text="{i18n>cityName}" />
+                <Text text="{i18n>productName}" />
                 </Column>
                 <Column width="12em">
-                <Text text="{i18n>population}" />
+                <Text text="{i18n>unitPrice}" />
+                </Column>
+                <Column width="12em">
+                <Text text="{i18n>CategoryID}" />
+                </Column>
+                <Column width="12em">
+                <Text text="Discontinued" />
+                </Column>
+                <Column width="12em">
+                <Text text="ProductID" />
                 </Column>
             </columns>
             <items>
             <ColumnListItem vAlign="Middle" press="onPress" type="Active" >
                 <cells>
-                    <Text id="CitiesModel-name" text="{CitiesModel>name}" />
-                    <Text text="{path:'CitiesModel>population', formatter:'.Formatter.formatPopulation'}"/>
+                    <Text id="CitiesModel-name" text="{ProductName}" />
+                    <Text text="{path:'UnitPrice', formatter:'.Formatter.formatPopulation'}"/>
+                    <Text text="{CategoryID}" />
+                    <Text text="{Discontinued}" />
+                    <Text text="{ProductID}" />    
                 </cells>
             </ColumnListItem>
             </items>
