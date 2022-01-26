@@ -26,9 +26,12 @@ sap.ui.define([
                 //console.log(oEvent.getSource().getBindingContext().sPath);
 
                 var oModelNorthWind = this.getOwnerComponent().getModel();
-                console.log(oEvent.getSource().getBindingContext().sPath)
+                console.log(oEvent.getSource().getBindingContext().sPath);
 
                 oModelNorthWind.read(oEvent.getSource().getBindingContext().sPath, {
+                    urlParameters: {
+                        "$expand": "Category, Order_Details, Supplier"
+                    },
                     success: function (oData){
                         console.log(oData);
                         sap.ui.getCore().setModel(new JSONModel(oData), "DetailModel");

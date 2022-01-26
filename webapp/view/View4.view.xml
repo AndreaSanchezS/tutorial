@@ -4,12 +4,168 @@
     displayBlock="true"
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
     xmlns:table="sap.ui.table"
-    xmlns:form="sap.ui.layout.form">
+    xmlns:f="sap.ui.layout.form">
 
 
     <Page>
-        <form:SimpleForm
+	<f:Form id="FormDisplay480_12120"
+				editable="false">
+				<f:title>
+					<core:Title text="Products" />
+				</f:title>
+				<f:layout>
+					<f:ResponsiveGridLayout
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="12"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="0"
+						emptySpanL="0"
+						emptySpanM="0"
+						emptySpanS="0"
+						columnsXL="2"
+						columnsL="2"
+						columnsM="1"
+						singleContainerFullSize="false" />
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer title="{i18n>titleProduct}">
+						<f:formElements>
+							<f:FormElement label="{i18n>productName}">
+								<f:fields>
+									<Text text="{DetailModel>/ProductName}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>ProductID}">
+								<f:fields>
+									<Text text="{DetailModel>/ProductID}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4QuantityperUnit}">
+								<f:fields>
+									<Text text="{DetailModel>/QuantityPerUnit}" />
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+					<f:FormContainer title="Category">
+						<f:formElements>
+							<f:FormElement label="{i18n>CategoryID}">
+								<f:fields>
+									<Text text="{DetailModel>/Category/CategoryID}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4CategoryName}">
+								<f:fields>
+									<Text text="{DetailModel>/Category/CategoryName}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4Description}">
+								<f:fields>
+									<Text text="{DetailModel>/Category/Description}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4Picture}">
+								<f:fields>
+									<Image src="data:image/bmp;base64,{= ${DetailModel>/Category/Picture}.substr(104)}"
+									width="100px" height="100px" press="onPicture"/>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+			<f:Form id="FormDisplay480_12120-2"
+				editable="false">
+				<f:title>
+					<core:Title text="{i18n>titleSupplier}" />
+				</f:title>
+				<f:layout>
+					<f:ResponsiveGridLayout
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="12"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="0"
+						emptySpanL="0"
+						emptySpanM="0"
+						emptySpanS="0"
+						columnsXL="2"
+						columnsL="2"
+						columnsM="1"
+						singleContainerFullSize="false" />
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer title="{i18n>titleSupplier}">
+						<f:formElements>
+							<f:FormElement label="{i18n>view4CompanyName}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/CompanyName}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4ContactName}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/ContactName}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4ContactTitle}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/ContactTitle}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4PostalCode}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/PostalCode}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4Address}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/Address}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4City}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/City}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4Country}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/Country}" />
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+					<f:FormContainer title="{i18n>titleUnits}">
+						<f:formElements>
+							<f:FormElement label="{i18n>view4UnitPrice}">
+								<f:fields>
+									<Text text="{DetailModel>/UnitPrice}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4UnitsinStock}">
+								<f:fields>
+									<Text text="{DetailModel>/UnitsInStock}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4UnitsOnOrder}">
+								<f:fields>
+									<Text text="{DetailModel>/UnitsOnOrder}" />
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>view4SupplierID}">
+								<f:fields>
+									<Text text="{DetailModel>/Supplier/SupplierID}" />
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+        <!-- <form:SimpleForm
 			maxContainerCols="2"
 			editable="false"
 			layout="ResponsiveGridLayout"
@@ -27,7 +183,7 @@
 				<Text text="{DetailModel>/UnitPrice}"/>
 
 				<Label design="Bold" text="{i18n>CategoryID}"/>
-				<Text text="{DetailModel>/CategoryID}"/>
+				<Text text="{DetailModel>/Category/CategoryID}"/>
 
                 <Label design="Bold" text="{i18n>Discontinued}"/>
 				<Text text="{DetailModel>/Discontinued}"/>
@@ -35,7 +191,7 @@
                 <Label design="Bold" text="{i18n>ProductID}"/>
 				<Text text="{DetailModel>/ProductID}"/>
 			</form:content>
-		</form:SimpleForm>
+		</form:SimpleForm> -->
     </Page>
 
 </mvc:View>

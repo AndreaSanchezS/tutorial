@@ -22,6 +22,10 @@ sap.ui.define([
                     const oDetailModel = sap.ui.getCore().getModel("DetailModel");
                     this.getView().setModel(oDetailModel, "DetailModel");  
                 }, this);
+            },
+
+            onPicture: function(oEvent){
+                Common.openDialogFromFragment(this, "idSayImage", "accenture.tutorial1.fragment.sayImage");
             }
 
 

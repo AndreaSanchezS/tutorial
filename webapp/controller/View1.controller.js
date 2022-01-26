@@ -57,6 +57,14 @@ sap.ui.define([
                 //var oRouter = this.getOwnerComponent().getRouter();
                 //oRouter.navTo("RouteView2");
                 Common.navigateTo(this, "RouteView3");
+            },
+
+            onLanguageSpanish: function(){
+                sap.ui.getCore().getConfiguration().setLanguage("es_ES");
+            },
+
+            onLanguageEnglish: function(){
+                sap.ui.getCore().getConfiguration().setLanguage("en_EN");
             }
 
         });
