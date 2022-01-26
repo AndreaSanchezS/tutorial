@@ -51,7 +51,7 @@
 							</f:FormElement>
 						</f:formElements>
 					</f:FormContainer>
-					<f:FormContainer title="Category">
+					<f:FormContainer title="{i18n>titleCategory}">
 						<f:formElements>
 							<f:FormElement label="{i18n>CategoryID}">
 								<f:fields>
